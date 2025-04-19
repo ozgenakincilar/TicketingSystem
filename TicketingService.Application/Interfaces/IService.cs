@@ -1,5 +1,4 @@
-﻿// TicketingSystem.Application/Interfaces/IService.cs
-namespace TicketingSystem.Application.Interfaces
+﻿namespace TicketingSystem.Application.Interfaces
 {
     public interface IService<T> where T : class
     {

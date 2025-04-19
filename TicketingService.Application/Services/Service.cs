@@ -1,5 +1,4 @@
-﻿// TicketingSystem.Application/Services/Service.cs
-using TicketingSystem.Application.Interfaces;
+﻿using TicketingSystem.Application.Interfaces;
 using TicketingSystem.Repositories.Interfaces;
 
 namespace TicketingSystem.Application.Services

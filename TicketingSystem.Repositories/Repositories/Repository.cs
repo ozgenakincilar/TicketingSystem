@@ -52,7 +52,6 @@ namespace TicketingSystem.Repositories.Repositories
 
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
         {
-            // Veritabanında verilen predicate'e göre verileri filtrele ve asenkron şekilde döndür
             return await _dbSet.Where(predicate).ToListAsync();
         }
     }

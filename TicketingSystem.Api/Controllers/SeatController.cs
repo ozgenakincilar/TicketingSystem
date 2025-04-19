@@ -12,13 +12,11 @@ namespace TicketingSystem.Api.Controllers
     {
         private readonly IService<Seat> _seatService;
 
-        // Constructor, SeatService bağımlılığını enjekte eder
         public SeatController(IService<Seat> seatService)
         {
             _seatService = seatService;
         }
 
-        // Tüm Seat'ları almak için GET isteği
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Seat>>> GetAll()
         {
@@ -26,7 +24,6 @@ namespace TicketingSystem.Api.Controllers
             return Ok(seats);
         }
 
-        // Id'ye göre bir Seat almak için GET isteği
         [HttpGet("{id}")]
         public async Task<ActionResult<Seat>> GetById(int id)
         {
@@ -40,7 +37,6 @@ namespace TicketingSystem.Api.Controllers
             return Ok(seat);
         }
 
-        // Yeni bir Seat oluşturmak için POST isteği
         [HttpPost]
         public async Task<ActionResult> Create([FromBody] Seat seat)
         {
@@ -49,15 +45,12 @@ namespace TicketingSystem.Api.Controllers
                 return BadRequest("Seat cannot be null.");
             }
 
-            // Seat'ı veritabanına ekleyin
             await _seatService.AddAsync(seat);
 
-            // Eğer oluşturma başarılıysa, CreatedAtAction ile yeni kaydın URL'sini dönün
             return CreatedAtAction(nameof(GetById), new { id = seat.Id }, seat);
         }
 
 
-        // Var olan bir Seat'ı güncellemek için PUT isteği
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, [FromBody] Seat seat)
         {
@@ -76,7 +69,6 @@ namespace TicketingSystem.Api.Controllers
             return NoContent();
         }
 
-        // Bir Seat'ı silmek için DELETE isteği
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {

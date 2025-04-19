@@ -1,5 +1,4 @@
-﻿// TicketingSystem.Api/Controllers/UserController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TicketingSystem.Application.Interfaces;
 using TicketingSystem.Domain.Models;
 

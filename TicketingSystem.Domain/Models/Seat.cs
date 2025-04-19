@@ -5,15 +5,13 @@ namespace TicketingSystem.Domain.Models
 {
     public class Seat
     {
-        public int Id { get; set; }  // Seat ID (Benzersiz kimlik)
-        public string SeatNumber { get; set; }  // Koltuk numarası
-        public bool IsAvailable { get; set; }  // Koltuk mevcut mu (True = Mevcut, False = Satıldı)
-        public int EventId { get; set; }  // Bu koltuğun ait olduğu etkinlik (foreign key)
+        public int Id { get; set; } 
+        public string SeatNumber { get; set; } 
+        public bool IsAvailable { get; set; } 
+        public int EventId { get; set; } 
 
-        // Navigation property to Event (Bu koltuk bir etkinliğe ait)
         public Event Event { get; set; }
 
-        // ICollection for UserSeatReservations (Bu koltuğun rezervasyonu yapılmış kullanıcıları tutar)
         public ICollection<UserSeatReservation> SeatReservations { get; set; }
     }
 }

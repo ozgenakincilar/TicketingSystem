@@ -8,12 +8,12 @@ namespace TicketingSystem.Domain.Models
 {
     public class PaymentInfo
     {
-        public string Id { get; set; }  // MongoDB'de Id genellikle string olur.
+        public string Id { get; set; }  
         public decimal Amount { get; set; }
-        public string PaymentMethod { get; set; } // Ödeme yöntemi: Kredi Kartı, PayPal, vs.
-        public string TransactionId { get; set; } // Ödeme işlemine ait transaction ID
+        public string PaymentMethod { get; set; } 
+        public string TransactionId { get; set; } 
         public DateTime PaymentDate { get; set; }
-        public string Status { get; set; }  // Ödeme durumu (Success, Failed, Pending, vs.)
+        public string Status { get; set; } 
     }
 
 }

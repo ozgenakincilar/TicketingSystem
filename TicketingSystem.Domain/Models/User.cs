@@ -5,17 +5,15 @@ namespace TicketingSystem.Domain.Models
 {
     public class User
     {
-        public int Id { get; set; }  // User ID
-        public string FirstName { get; set; }  // First Name of the User
-        public string LastName { get; set; }  // Last Name of the User
-        public string Email { get; set; }  // Email Address
-        public string PhoneNumber { get; set; }  // Phone Number
-        public DateTime DateOfBirth { get; set; }  // Date of Birth
+        public int Id { get; set; }
+        public string FirstName { get; set; } 
+        public string LastName { get; set; } 
+        public string Email { get; set; } 
+        public string PhoneNumber { get; set; } 
+        public DateTime DateOfBirth { get; set; }  
 
-        // ICollection for UserSeatReservations (This will be used to store the user's reserved seats)
         public ICollection<UserSeatReservation> SeatReservations { get; set; }
 
-        // ICollection for Orders (This will be used to store orders placed by the user)
         public ICollection<Order> Orders { get; set; }
     }
 }

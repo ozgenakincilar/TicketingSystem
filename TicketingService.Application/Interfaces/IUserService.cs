@@ -12,7 +12,6 @@ namespace TicketingSystem.Application.Interfaces
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(int id);
 
-        // Kullanıcı rezervasyonlarını getirme
         Task<IEnumerable<UserSeatReservation>> GetUserReservationsAsync(int userId);
     }
 }

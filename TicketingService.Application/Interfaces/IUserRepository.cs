@@ -1,5 +1,4 @@
-﻿// TicketingSystem.Application/Interfaces/IUserRepository.cs
-using TicketingSystem.Domain.Models;
+﻿using TicketingSystem.Domain.Models;
 
 namespace TicketingSystem.Application.Interfaces
 {

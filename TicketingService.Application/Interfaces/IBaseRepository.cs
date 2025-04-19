@@ -1,5 +1,4 @@
-﻿// TicketingSystem.Application/Interfaces/IBaseRepository.cs
-namespace TicketingSystem.Application.Interfaces
+﻿namespace TicketingSystem.Application.Interfaces
 {
     public interface IBaseRepository<T> where T : class
     {
